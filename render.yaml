@@ -1,0 +1,8 @@
+services:
+  - type: worker
+    name: telegram-video-bot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false # set it in the Render dashboard (Environment), never commit it
